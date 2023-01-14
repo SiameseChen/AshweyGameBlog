@@ -1,0 +1,247 @@
+body {
+    margin: 0px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    background-color: #0A0A0A;
+}
+
+
+/* header container */
+header {
+    display: grid;
+    grid-template-areas: 
+        "logo search-bar";
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+    gap: 80vw;
+    width: clamp(200px, 50%, 600px);
+}
+
+/* header items */
+.logo { grid-area: logo; }
+.search-bar { grid-area: search-bar; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #6B6B6B;
+}
+
+/* nav container */
+nav {
+    display: grid;
+    margin: 0px;
+    grid-template-areas: 
+        "navs youtube-logo";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: left;
+    gap: 50%;
+    background-color: #262626;
+    width: clamp(50%, 100%, 100%);
+}
+
+/* nav items */
+.navs { grid-area: navs;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    gap: 1rem;
+}
+.youtube-link {grid-area: youtube-logo;
+    margin-right: 0px;
+    width: 30px;
+}
+
+/* introduction container */
+#introduction {
+    display: grid;
+    background-color: #262626;
+    grid-template-areas: 
+        "image text";
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+}
+
+/* introduction items */
+#introduction img { grid-area: image;
+    width: 100%;}
+article { grid-area: text;
+    color: white;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 3rem;}
+
+/* blog-display container */
+#blog-display {
+    display: grid;
+    background-image: linear-gradient(to bottom, #6B6B6B, #101010);
+    justify-items: center;
+    align-items: center;
+}
+
+/* blog-display items */
+#blog-display iframe {
+    margin: 20px;
+    width: 80%;
+}
+
+/* about-me containers */
+#about-me {
+    background-image: url('../images/Ashwey.png');
+    background-size: 100%;
+}
+#about-me-text {
+    display: grid;
+    grid-template-areas: 
+        "heading"
+        "heading2"
+        "heading3"
+        "p1"
+        "p2"
+        "p3";
+    grid-template-columns: 1fr 2fr;
+    justify-items: left;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+/* about-me container */
+#about-me-text h1 { grid-area: heading;}
+#about-me-text h2 { grid-area: heading2;}
+#about-me-text h3 { grid-area: heading3;}
+#paragraph-one { grid-area: p1; width: clamp(45ch, 50%, 75ch);}
+#paragraph-two { grid-area: p2; width: clamp(45ch, 50%, 75ch);}
+#paragraph-three { grid-area: p3; width: clamp(45ch, 50%, 75ch);}
+
+/* contact containers */
+#contact {
+    display: grid;
+    grid-template-areas: 
+        "con-text con-inputs";
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    font-weight: bold;
+}
+
+#contact-text {
+    grid-area: con-text;
+    display: grid;
+    grid-template-areas: 
+        "main-text"
+        "email";
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#contact-input {
+    grid-area: con-inputs;
+    display: grid;
+    gap: 5px;
+    margin-top: 10px;
+    grid-template-areas: 
+        "name-input-label"
+        "name-input"
+        "email-input-label"
+        "email-input"
+        "message-input-label"
+        "message-input"
+        "submit-button";
+    justify-items: center;
+    align-items: center;
+    text-align: left;
+}
+
+/* contact items */
+#contact-text h1 {width: 50%;}
+#name-input { grid-area: name-input; width: 80%; }
+#email-input { grid-area: email-input; margin-bottom: 20px; width: 80%;}
+#message-input { grid-area: message-input; margin-bottom: 20px; margin-top: 40px; width: 80%; height: 120%;}
+#name-input-label { grid-area: name-input-label; }
+#email-input-label { grid-area: email-input-label; }
+#message-input-label { grid-area: message-input-label; }
+#contact-input input[type="submit"] { grid-area: submit-button;
+    background: url('../images/button_submit.png'); 
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    scale: 150%;}
+
+/* subscribe-form container */
+#subscribe-form {
+    display: grid;
+    grid-template-areas: "subscribe-box" ;
+    background: linear-gradient(to bottom, #6B6B6B, #101010);
+    align-items: center;
+    justify-items: center;
+    height: clamp(15em, 20em, 20em);
+}
+
+/* subscribe-form items */
+#subscribe-box {
+    grid-area: subscribe-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-weight: bold;
+    padding: 1.5em;
+    gap: 1.2em;
+    height: clamp(15em, 20em, 20em);
+    background-color: #0A0A0A;
+}
+
+#subscribe-box h1 {
+    grid-area: subscribe-text;
+    text-align: center;
+    width: clamp(45ch, 50%, 75ch);
+    font-size: 1.5rem;
+}
+
+#subscribe-input {
+    grid-area: your-email;
+}
+#email-signup {
+    width: 120%;
+}
+
+#subscribe-box button {
+    grid-area: join-button;
+    font-size: 16px;
+    width: clamp(2.0rem, 50%, 3.0rem)
+}
+
+/* footer container */
+footer {
+    display: grid;
+    grid-template-areas: 
+    "my-email"
+    "youtube-link-2"
+    "copyright"
+    "code-credit"
+    "art-credit";
+    align-items: center;
+    justify-items: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 1em;
+    font-size: 0.5em;
+    height: clamp(2.0rem, 100%, 5.0rem);
+}
+
+/* footer items */
+#my-email { grid-area: my-email; }
+footer .youtube-link { grid-area: youtube-link-2; }
+#copyright {grid-area: copyright}
+#code-credit {grid-area: code-credit; }
+#art-credit {grid-area: art-credit; }
+footer a { text-decoration: none; color: white;}
